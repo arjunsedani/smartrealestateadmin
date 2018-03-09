@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>3d.io Floor Plan App</title>
+    <title>Smart Real Estate Admin</title>
     <meta name="charset" content="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="3d, aframe, webgl, webvr, archilogic, 3d.io, interior, 3d furniture">
@@ -38,6 +38,24 @@
                 <label for="address" class="order-label"> ... or enter image URL here</label>
             </div>
         </div>
+		<div class='row'>
+            <div id="file-drop-box" class="order-info-upload2">
+                <div class="content-dropzone free-order" title="Free 3D model floor plan upload" file-keys="">
+                    <img class="dropzone-upload"/>
+                    <div class="dropzone-area">
+                        <span class="dropzone-info">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="62" height="52" viewBox="0 0 62 52">
+                            <g transform="translate(.918 1.557)" stroke-width="2" stroke="#9B9B9B" fill="none" fill-rule="evenodd" opacity=".6">
+                                <polygon points="0.4350024 0 0.4350024 48.8151481 37.9016044 48.8151481 37.7623891 29.4489155 59.9940481 29.4489155 59.9416488 15.2902531 59.9416488 0 24.7207655 0"/>
+                                <path d="M37.6430952,29.5566502 L0.620364247,29.5566502M23.3959538,28.7252984 L23.3959538,1.54923283M24.016484,10.1337087 L59.9376502,10.1337087" stroke-linecap="square"/>
+                            </g>
+                        </svg>
+                        <span>Upload Outside Image of the property</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class='row'>
             <div class="order-text address">
                 Conversion takes a while, please enter an email-address so we can notify you when we are done </div>
@@ -49,17 +67,19 @@
 
         <div class='row'>
             <div class="order-text address">
-                Optional: Add location name for lighting settings
+                Please Enter Your Property Details:
             </div>
             <div class="order-field address">
-                <input id="address" placeholder="e.g. Springfield" class="order-input" autocomplete="off">
+                <input id="address" placeholder="write your adress here" class="order-input" autocomplete="off">
+				<input placeholder="Contact Number" class="order-input" autocomplete="off">
+				<input placeholder="Write your Estimated Selling Price" class="order-input" autocomplete="off">
             </div>
 
         </div>
 
         <div class='row'>
             <button type="submit" class="convert-button order-btn">
-                <span>Convert</span>
+                <span>PUBLISH</span>
             </button>
             <button  class="order-btn white" type="button" id="btn-clear">
                 <span>Clear Fields</span>
@@ -68,14 +88,7 @@
         </div>
 
     </form>
-    <div class="row detail-links">
-      <a href="https://3d.io/docs/api/1/convert-floor-plan-to-3d.html" target="_blank">Docs</a> |
-      <a href="https://github.com/archilogic-com/3dio-floor-plan-app" target="_blank">Github</a> |
-      <a href="https://stackoverflow.com/questions/tagged/aframe%20and%203d.io%20or%20archilogic" target="_blank">Stack Overflow</a> |
-      <a href="https://3d.io" target="_blank">3d.io</a>
-    </div>
+    
     <div id="api-info"></div>
     <script src="app.js"></script>
 </body>
-
-</html>
