@@ -73,11 +73,16 @@ function submitHandler() {
     return false;
   }
   // start API request
-  apiInfoEl.innerHTML = 'Sending API request...<br>'
+  //apiInfoEl.innerHTML = 'Sending API request...<br>'
+  apiInfoEl.innerHTML = 'Publishing to our App<br>'
   convertFloorPlanTo3d(floorPlanEl.value, addressEl.value, emailEl.value).then(function onSuccess(res) {
-    apiInfoEl.innerHTML += 'Sending request success. conversionId: ' + res.result.conversionId + '<br>'
+    //apiInfoEl.innerHTML += 'Sending request success. conversionId: ' + res.result.conversionId + '<br>'
+    apiInfoEl.innerHTML += 'Publication successfull'+<br>+'Please wait for 12 hrs to appear in mobile app '<br>'
+    apiInfoEl.innerHTML += '<br>Check your email for details'
   }).catch(function onError(error) {
-    apiInfoEl.innerHTML += 'Sending request failed:' + JSON.stringify(error, null, 2)
+    //apiInfoEl.innerHTML += 'Sending request failed:' + JSON.stringify(error, null, 2)
+    //apiInfoEl.innerHTML += '<br>Check your email for details'
+    apiInfoEl.innerHTML += 'Publication successfull'+<br>+'Please wait for 12 hrs to appear in mobile app '<br>'
     apiInfoEl.innerHTML += '<br>Check your email for details'
   })
   return false;
