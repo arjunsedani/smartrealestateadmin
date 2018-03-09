@@ -77,12 +77,11 @@ function submitHandler() {
   apiInfoEl.innerHTML = 'Publishing to our App<br>'
   convertFloorPlanTo3d(floorPlanEl.value, addressEl.value, emailEl.value).then(function onSuccess(res) {
     //apiInfoEl.innerHTML += 'Sending request success. conversionId: ' + res.result.conversionId + '<br>'
-    apiInfoEl.innerHTML += 'Publication successfull'+<br>+'Please wait for 12 hrs to appear in mobile app '<br>'
-    apiInfoEl.innerHTML += '<br>Check your email for details'
+    apiInfoEl.innerHTML += 'Publication successfull' + res.result.conversionId +'Please wait for 12 hrs to appear in mobile app'+ '<br>'
   }).catch(function onError(error) {
     //apiInfoEl.innerHTML += 'Sending request failed:' + JSON.stringify(error, null, 2)
     //apiInfoEl.innerHTML += '<br>Check your email for details'
-    apiInfoEl.innerHTML += 'Publication successfull'+<br>+'Please wait for 12 hrs to appear in mobile app '<br>'
+    apiInfoEl.innerHTML += 'Publication successfull'+'Please wait for 12 hrs to appear in mobile app '<br>'+JSON.stringify(error, null, 2)
     apiInfoEl.innerHTML += '<br>Check your email for details'
   })
   return false;
