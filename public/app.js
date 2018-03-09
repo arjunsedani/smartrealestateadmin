@@ -24,6 +24,20 @@ io3d.utils.ui.fileDrop({
     }
   }
 })
+// create file drop box2
+io3d.utils.ui.fileDrop({
+  elementId: 'file-drop-box2',
+  upload: true,
+  dragOverCssClass: 'file-drop-box-dragover',
+  // set file url if upload succeded
+  onInput: function (files) {
+    if (files && files.length) {
+      floorPlanEl.value = files[0].url
+      dropZone.src = files[0].url
+    }
+  }
+})
+
 // check for manual file url input
 floorPlanEl.addEventListener('input', function(evt){
   var url = evt.target.value
