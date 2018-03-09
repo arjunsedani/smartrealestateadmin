@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Smart Real Estate Admin</title>
+    <title>3d.io Floor Plan App</title>
     <meta name="charset" content="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="3d, aframe, webgl, webvr, archilogic, 3d.io, interior, 3d furniture">
@@ -38,22 +38,28 @@
                 <label for="address" class="order-label"> ... or enter image URL here</label>
             </div>
         </div>
- 
         <div class='row'>
             <div class="order-text address">
-                Please Enter Your Property Details:
+                Conversion takes a while, please enter an email-address so we can notify you when we are done </div>
+            <div style="" class="order-field">
+                <input id="email" required="required" class="order-input popup-order-input-invalid">
+                <label for="address" class="order-label">Email</label>
+            </div>
+        </div>
+
+        <div class='row'>
+            <div class="order-text address">
+                Optional: Add location name for lighting settings
             </div>
             <div class="order-field address">
-                <input id="address" placeholder="write your adress here" class="order-input" autocomplete="off">
-				<input placeholder="Contact Number" class="order-input" autocomplete="off">
-				<input placeholder="Write your Estimated Selling Price" class="order-input" autocomplete="off">
+                <input id="address" placeholder="e.g. Springfield" class="order-input" autocomplete="off">
             </div>
 
         </div>
 
         <div class='row'>
             <button type="submit" class="convert-button order-btn">
-                <span>PUBLISH</span>
+                <span>Convert</span>
             </button>
             <button  class="order-btn white" type="button" id="btn-clear">
                 <span>Clear Fields</span>
@@ -62,7 +68,12 @@
         </div>
 
     </form>
-    
+    <div class="row detail-links">
+      <a href="https://3d.io/docs/api/1/convert-floor-plan-to-3d.html" target="_blank">Docs</a> |
+      <a href="https://github.com/archilogic-com/3dio-floor-plan-app" target="_blank">Github</a> |
+      <a href="https://stackoverflow.com/questions/tagged/aframe%20and%203d.io%20or%20archilogic" target="_blank">Stack Overflow</a> |
+      <a href="https://3d.io" target="_blank">3d.io</a>
+    </div>
     <div id="api-info"></div>
     <script src="app.js"></script>
 </body>
