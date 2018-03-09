@@ -21,6 +21,5 @@
     "firebase-admin": "^5.2.0",
     "instant-api": "1.0.2",
     "nodemailer": "^4.0.1",
-    "nodemailer-sendgrid-transport": "^0.2.0"
   }
 }
