@@ -11,8 +11,8 @@ var apiInfoEl = document.querySelector('#api-info')
 var buttonClear = document.querySelector('#btn-clear')
 var dropArea = document.querySelector('.dropzone-area')
 var dropZone = document.querySelector('.dropzone-upload')
-var dropArea2 = document.querySelector('.dropzone-area2')
-var dropZone2 = document.querySelector('.dropzone-upload2')
+var dropArea2 = document.querySelector('.dropzone2-area')
+var dropZone2 = document.querySelector('.dropzone2-upload')
 
 // create file drop box
 io3d.utils.ui.fileDrop({
@@ -84,12 +84,12 @@ dropZone.onerror = function() {
 dropZone2.onload = function() {
   dropArea2.style.display = 'none'
   dropZone2.style.display = 'block'
-  floorPlanEl.style.color = '#27292b'
+  floorPlanE2.style.color = '#27292b'
   dropZone.setAttribute('data-valid', true)
 }
 // handle image loading errors
 dropZone2.onerror = function() {
-  floorPlanEl.style.color = 'red'
+  floorPlanE2.style.color = 'red'
   clearImg()
 }
 // reset the upload box
@@ -97,12 +97,15 @@ function clearImg() {
   dropZone.removeAttribute('data-valid')
   dropArea.style.display = 'block'
   dropZone.style.display = 'none'
+    dropArea2.style.display = 'block'
+  dropZone2.style.display = 'none'
 }
 // clear entire form
 buttonClear.addEventListener('click', function(){
   emailEl.value=''
   addressEl.value=''
   floorPlanEl.value=''
+  floorPlanE2.value=''
   apiInfoEl.innerHTML=''
   clearImg()
 })
